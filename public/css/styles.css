@@ -2,7 +2,6 @@ body {
   background-image: url('../notebook.jpeg')
 }
 
-
 #app {
   width: 60%;
   margin: 0 auto;
@@ -53,4 +52,21 @@ button{
   color: #fff;
   cursor: pointer;
   border: 1px solid #000;
+}
+
+span.completed {
+  text-decoration: line-through;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="submit"] {
+  width: 15%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
 }
