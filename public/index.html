@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Emma's To Do List</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/bundle.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <form v-on:submit.prevent="saveNewItem">
+        <label for="new-item"> Add a new item: </label>
+        <input id="new-item" type="text" v-model="newItem" />
+        <label class="radio"><input type="radio" id="high" v-model="priority" value="High" class="radio"/>High Priority</label>
+        <label class="radio"><input type="radio" id="low" v-model="priority" value="Low" class="radio"/>Low Priority</label>
+        <input type="submit" value="Save New Item" />
+      </form>
+      <ul>
+      <li v-for="(item, index) in items" v-bind:class="item.priority == 'High' ?
+      'high' : 'low'">
+        <span> {{item.name}} </span>
+        <span v-if="item.isCompleted">Completed ✅</span>
+        <button v-if="!item.isCompleted" v-on:click="completeItem(index)">Complete?</button>
+      </li>
+    </ul>
+    </div>
+  </body>
+</html>
