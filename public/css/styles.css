@@ -26,9 +26,8 @@ li span {
 }
 
 li button {
-  background: black;
-  color: #fff;
-  border: none;
+  color: black;
+  border: 1px solid black;
   padding: 10px;
   cursor: pointer;
 }
@@ -48,10 +47,8 @@ input[type="text"] {
 
 button{
   padding: 10px;
-  background: #000;
   color: #fff;
   cursor: pointer;
-  border: 1px solid #000;
 }
 
 span.completed {
@@ -69,4 +66,12 @@ input[type="submit"] {
   margin-left: auto;
   margin-right: auto;
   margin-top: 10px;
+}
+
+#high {
+  color: red;
+}
+
+#low {
+  color: green;
 }
